@@ -1,0 +1,4 @@
+{
+	"tailwindCSS.classFunctions": ["cn", "clsx", "tw"],
+	"tailwindCSS.experimental.classRegex": ["tw`([^`]*)`"]
+}

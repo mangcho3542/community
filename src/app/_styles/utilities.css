@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+@utility scrollbar-hide {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+
+@utility tint {
+  box-shadow: inset 0 0 0 100vmax color-mix(in srgb, currentColor 10%, transparent);
+}
+
+@utility hover-tint {
+  transition: box-shadow 200ms ease; /* hover 해제 시 (원래 상태로 복귀) */
+
+  @media (hover: hover) {
+    &:hover {
+      transition: box-shadow 200ms ease; /* hover 진입 시 */
+      @apply tint;
+    }
+  }
+}

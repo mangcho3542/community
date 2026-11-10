@@ -1,59 +1,76 @@
 @import "tailwindcss";
-@import "../styles/components.css";
+@plugin "@tailwindcss/typography";
+@import "./_styles/components.css";
+@import "./_styles/utilities.css";
 
 :root {
-  /*text*/
-  --text-primary: #222222;
-  --text-secondary: var(--color-gray-500);
-  --text-disabled: #c5c8ce;
+  /*fg */
+  --fg: rgb(34, 34, 34);
+  --fg-secondary: rgb(99, 99, 94);
+  --fg-disabled: rgb(197, 200, 206);
+  --fg-editor-link: rgb(7, 222, 176);
 
-  /*border*/
-  --border-primary: #e2e5eb;
-  --border-secondary: #EBEEF1;
+  /*
+  background
+  15씩 낮아짐
+  */
+  --bg: rgb(255, 255, 255);
+  --bg-secondary: rgb(240, 240, 240);
+  --bg-third: rgb(225, 225, 225);
+  --bg-fourth: rgb(210, 210, 210);
+
+  /*border */
+  --border-primary: rgb(226, 229, 235);
+  --border-secondary: rgb(235, 238, 241);
   --border: var(--border-primary);
 
-  /*common*/
-  --danger: #ee4700;
-  --warning: #ff881a;
-  --caution: #f9a80c;
-  --success: #00bb2a;
-  --ghost: #abb0b9;
-
-  --bg: #ffffff;
-  --fg: var(--text-primary);
-}
-
-@theme inline {
-  /*text*/
-  --text-primary: var(--text-primary);
-  --text-secondary: var(--text-secondary);
-  --text-disabled: var(--text-disabled);
-
-  /*border*/
-  --border-primary: var(--border-primary);
-  --border-secondary: var(--border-secondary);
-  --border: var(--border);
-
-  /*common*/
-  --danger: var(--text-danger);
-  --warning: var(--warning);
-  --caution: var(--caution);
-  --success: var(--success);
-  --ghost: var(--ghost);
-
-  /*background*/
-  --bg-hover: var(--color-neutral-800);
-
-  --bg: var(--bg);
-  --fg: var(--fg);
+  /*common */
+  --danger: rgb(238, 71, 0);
+  --warning: rgb(255, 136, 26);
+  --caution: rgb(249, 168, 12);
+  --success: rgb(0, 187, 42);
+  --ghost: rgb(171, 176, 185);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0a0a0a;
-    --fg: #ededed;
-    --text-secondary: var(--color-gray-400);
+    /*text */
+    --fg: rgb(237, 237, 237);
+    --fg-secondary: rgb(181, 179, 173);
+    --fg-editor-link: rgb(94, 234, 212);
+
+    /*background */
+    --bg: rgb(10, 10, 10);
+    --bg-secondary: rgb(25, 25, 25);
+    --bg-third: rgb(40, 40, 40);
+    --bg-fourth: rgb(55, 55, 55);
   }
+}
+
+@theme inline {
+  /*text*/
+  --color-fg: var(--fg);
+  --color-secondary: var(--fg-secondary);
+  --color-disabled: var(--fg-disabled);
+  --color-editor-link: var(--fg-editor-link);
+
+  /*border*/
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-border: var(--border);
+
+  /*common*/
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-caution: var(--caution);
+  --color-success: var(--success);
+  --color-ghost: var(--ghost);
+
+  /*background*/
+  --color-bg: var(--bg);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-third: var(--bg-third);
+  --color-bg-fourth: var(--bg-fourth);
 }
 
 html,
@@ -69,9 +86,15 @@ body {
   font-weight: 400;
   background: var(--bg);
   color: var(--fg);
+  z-index: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
 }
