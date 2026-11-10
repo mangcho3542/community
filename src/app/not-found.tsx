@@ -1,3 +1,4 @@
+"use client";
 import FuzzyText from "@shared/ui/FuzzyText";
 import Link from "@shared/ui/Link";
 import { usePathname } from "next/navigation";
