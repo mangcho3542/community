@@ -1,5 +1,5 @@
-import FuzzyText from "@components/common/FuzzyText";
-import Link from "@components/ui/Link";
+import FuzzyText from "@shared/ui/FuzzyText";
+import Link from "@shared/ui/Link";
 
 export default function NotFound() {
 	return (
@@ -8,7 +8,7 @@ export default function NotFound() {
 				존재하지 않는 페이지입니다.
 			</FuzzyText>
 
-			<Link href="/" className="visited:text-(--fg) visited:no-underline">
+			<Link href="/" className="visited:text-fg visited:no-underline">
 				메인 페이지로 돌아가기
 			</Link>
 		</main>

@@ -1,0 +1,7 @@
+@reference "tailwindcss";
+
+@layer components {
+    .main {
+        @apply md:max-w-xl md:w-xl mx-auto flex grow flex-col min-h-0 h-full relative;
+    }
+}

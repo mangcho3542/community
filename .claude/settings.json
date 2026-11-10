@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun run *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(node -e \"const r=require\\('react'\\); console.log\\(Object.keys\\(r\\).filter\\(k=>/Effect/i.test\\(k\\)\\)\\)\")",
+      "Bash(npx tsc *)",
+      "Bash(npx eslint *)",
+      "Bash(bun src/features/write/config/ToolbarConfig.test.ts)"
+    ]
+  }
+}
