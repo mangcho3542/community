@@ -8,7 +8,7 @@ const underlineClassName = cn(
 	"after:border-b-2 after:border-solid after:border-border-primary",
 	"after:h-0.25 after:-translate-y-4 after:opacity-0",
 	"after:transition-all after:duration-500",
-	"hover:after:opacity-100 hover:after:-translate-y-2",
+	"hover:after:opacity-100 hover:after:translate-y-0",
 );
 
 export interface LinkProps extends ComponentProps<typeof NextLink> {
