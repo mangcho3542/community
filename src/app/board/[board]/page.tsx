@@ -1,4 +1,4 @@
-import { BoardAry, BoardT, assertBoard } from "@entities/board/model/Board";
+import { BoardAry, BoardT } from "@entities/board/model/Board";
 
 export function generateStaticParams() {
 	return BoardAry.map((board) => ({ board }));
