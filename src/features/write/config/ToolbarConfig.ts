@@ -162,7 +162,7 @@ export const KeepMarksOnUndo = Extension.create({
 
 export const MarkOptions: ToolbarConfig[] = [
   {
-    icon: "Bold",
+    icon: "LetterB",
     actions: (editor) => toggleMark(editor, "bold"),
     stateKey: "isBold",
     text: "굵게",
