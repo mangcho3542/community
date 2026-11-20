@@ -1,6 +1,6 @@
 "use client";
-import FuzzyText from "@shared/ui/FuzzyText";
-import Link from "@shared/ui/Link";
+import FuzzyText from "@components/common/FuzzyText";
+import Link from "@components/common/Link";
 
 export default function NotFound() {
 	return (
