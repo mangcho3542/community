@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Header from "@widgets/header/Header";
 import "./globals.css";
-import Nav from "@widgets/nav/Nav";
+
+export const metadata: Metadata = {
+  title: "비스듬",
+  description: "BDSM 커뮤니티",
+};
 
 const suit = localFont({
   src: [
@@ -29,21 +32,10 @@ const suit = localFont({
   ],
 });
 
-export const metadata: Metadata = {
-  title: "비스듬",
-  description: "BDSM 커뮤니티",
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className={suit.className}>
       <body>
-        {/**Header */}
-        <Header />
-
-        {/**Nav */}
-        <Nav />
-
         {children}
 
         <div
